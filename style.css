@@ -1,0 +1,193 @@
+:root {
+   --colorPrimario: #F3E5D8;
+   --colorTitulos: #7A3E30;
+   --colorTiutloh3: #6E3850;
+   --negro: #000000;
+   --gris: #efedec;
+
+   --colorWhite: hsl(0, 0%, 100%);
+   --colorRose: hsl(330, 100%, 98%);
+   --colorEggshell: hsl(30, 54%, 90%);
+   --colorLightGrey: hsl(30, 18%, 87%);
+   --colorWengeBrown: hsl(30, 10%, 34%);
+   --colorDarkCharcoal: hsl(24, 5%, 18%);
+   --colorSpan: #534E48; 
+   
+
+   /**FUENTES*/
+   --fuenteTitulos: "Young Serif", serif;
+   --fuenteSecundaria: "Outfit", sans-serif;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*para que un rem sea igual a 10px*/ 
+}
+*, *:before, *:after {
+    box-sizing: inherit; 
+}
+body { 
+    line-height: 2;
+    background-color: var(--colorPrimario);
+}    
+ p, ol, ul { 
+    font-family: var(--fuenteSecundaria);
+    font-size: 16px;   
+    font-weight: 300;
+}
+ol, ul {
+    padding: 0; /* esto remueve el padding original de la etiqueta de listado para poder palicar el padding personalizado.*/
+}
+h2 {
+    font-family: var(--fuenteTitulos);
+    font-size: 25px;
+    font-weight: lighter;
+    color: var(--colorTitulos);
+}
+span {
+    font-weight: bold;
+    color: var(--colorSpan);   
+}
+ol li::marker {
+    font-weight: bold;
+    color: var(--colorTitulos);
+}
+ul li::marker {
+    color: var(--colorTiutloh3);
+}
+li {   
+     padding-left: 25px; 
+     margin-left: 20px;
+ }
+ /* UTILIDADES*/ 
+ .container { /*Tamaño de contenedor para menores de 1440px  768px*/
+    max-width: 120rem;
+    width: 80%;
+    margin: 0 auto;
+}
+@media (min-width: 1440px) {
+    .container {
+        max-width: 120rem;
+        width: 90%;
+        margin: 0 auto;}
+} 
+/*HEADER */
+@media (min-width: 375px) {
+    .fondo__imagen  {
+        background-image: url(/img/image-omelette.jpeg);
+        height: 18rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+@media (min-width: 768px) {
+    .fondo__imagen  {
+        background-image: url(/img/image-omelette.jpeg);
+        height: 30rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media (min-width: 1440px) {
+    .fondo__imagen  {
+        background-image: url(/img/image-omelette.jpeg);
+        width: 90%;
+        height: 30rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 2rem; 
+        margin: 0 auto; 
+    }
+}
+@media (min-width: 1440px) {
+    .fondo {
+        padding-top: 3rem;
+        margin-bottom: -1rem;
+    }
+}
+.header {
+    background-color: var(--colorWhite);  
+}
+@media (min-width: 1440px) {
+    .header {
+        background-color: var(--colorWhite);
+        margin: 15rem 35rem ;
+        border-radius: 2rem;}
+}
+.titulo1__color {
+    font-family: var(--fuenteTitulos);
+    font-weight:lighter;
+    font-size: 30px; 
+    line-height: 1;   
+    padding-bottom: 2rem;   
+}
+@media (min-width: 1440px ) {
+    .titulo1__color {
+        font-family: var(--fuenteTitulos);
+        font-weight:lighter;
+        font-size: 38.5px;
+        line-height: 2; 
+        margin-bottom: -0.5rem;
+    } 
+}
+.preparacion {
+    background-color: #FFF7FC;
+    margin-top: 4rem;
+    padding-bottom: 1rem ; 
+}
+.preparacion__titulo {
+    font-family: var(--fuenteSecundaria);
+    font-size: 19px;
+    color: var(--colorTiutloh3);
+    font-weight: 600;
+    padding-left: 3rem;
+    padding-top: 2rem;
+ }
+.ingrediente, .instrucciones {
+    border-bottom: 1px solid var(--gris);
+}
+.letra-parrafo {
+    font-family: var(--fuenteSecundaria);
+    font-size: 16px;   
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: -2rem;
+}
+.preparacion__lista {
+    margin-left: 30px; 
+    margin-top: -2rem;
+}
+.ingrediente__lista {
+    margin-top: -1rem; 
+}
+.instrucciones__lista {
+    margin-top: -1.5rem; 
+    
+}
+.nutricion__parrafo {
+    margin-top: -2rem;
+}
+.instrucciones__titulo {
+    margin-left: -0.5rem;
+}
+.nutricion__lista {
+    border-bottom: 1px solid var(--gris);
+}
+.nutricion__lista:last-of-type {
+    border-bottom: none;
+}
+.nutricion__parrafosLista {
+    padding-left: 3.2rem;
+    display: grid;   
+    grid-template-columns: 1fr 1fr; 
+    line-height: 1.5; 
+}
+.nutricion__parrafo1 {
+    margin-top: -1rem;  
+}
+.nutricion__span {
+    color: var(--colorTitulos);
+}
+.nutricion {
+    padding-bottom: 4rem;
+  }
